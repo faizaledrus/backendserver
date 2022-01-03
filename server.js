@@ -9,7 +9,7 @@ const app = express();
 dotenv.config({ path: "./config.env" });
 const port = process.env.PORT || 5000;
 app.use(cors());
-app.use(express.json());
+// app.use(express.json());
 app.use(record);
 // get driver connection
 const dbo = db
