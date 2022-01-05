@@ -26,6 +26,12 @@ recordRoutes.route("/record").get(function (req, res) {
     });
 });
 
+recordRoutes.route("/").post(function (req, res) {
+  console.log(req.body)
+   res.json({
+    ...req.body
+  })
+});
 // This section will help you get a single record by id
 recordRoutes.route("/record/:id").get(function (req, res) {
   let db_connect = dbo.getDb();
